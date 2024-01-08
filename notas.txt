@@ -1,0 +1,19 @@
+pip install virtualenv
+python -m venv venv
+pip install django
+django-admin startproject django_crud_api .
+python manage.py runserver
+python manage.py startapp tasks
+python manage.py migrate
+pip install djangorestframework
+pip install django-cors-headers
+settings -> APPS 'corsheaders', 'rest_framework', 'tasks'
+settings -> MIDDLEWARE -> "corsheaders.middleware.CorsMiddleware",
+tasks -> models.py -> crear tabla
+python manage.py makemigrations tasks
+python manage.py migrate tasks 
+
+****** Crear un usuario ******
+python manage.py createsuperuser
+
+pip install coreapi
